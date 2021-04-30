@@ -117,3 +117,18 @@ gcc -o integerConverter integerConverter.c
 
 Exam 2:
 
+gcc -o sortalphabetic2 sortalphabetic2.c
+
+./sortalphabetic2
+
+gcc -o sortnumeric1 sortnumeric1.c
+
+./sortnumeric1
+
+gcc -o sortnumericQ3 sortnumericQ3.c
+
+./sortnumericQ3
+
+gcc -o covidvaccine covidvaccine.c
+
+./covidvaccine
