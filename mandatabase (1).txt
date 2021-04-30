@@ -1,0 +1,500 @@
+ECHO(1)                         User Commands                         ECHO(1)
+
+
+
+NAME
+       echo - display a line of text
+
+SYNOPSIS
+       echo [SHORT-OPTION]... [STRING]...
+       echo LONG-OPTION
+
+DESCRIPTION
+       Echo the STRING(s) to standard output.
+
+       -n     do not output the trailing newline
+
+       -e     enable interpretation of backslash escapes
+
+       -E     disable interpretation of backslash escapes (default)
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       If -e is in effect, the following sequences are recognized:
+
+       \\     backslash
+
+       \a     alert (BEL)
+
+       \b     backspace
+
+       \c     produce no further output
+
+       \e     escape
+
+       \f     form feed
+
+       \n     new line
+
+       \r     carriage return
+
+       \t     horizontal tab
+
+       \v     vertical tab
+
+       \0NNN  byte with octal value NNN (1 to 3 digits)
+
+       \xHH   byte with hexadecimal value HH (1 to 2 digits)
+LS(1)                           User Commands                           LS(1)
+
+
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about the FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort is  speci‐
+       fied.
+
+       Mandatory  arguments  to  long options are mandatory for short options
+       too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              scale   sizes   by   SIZE   before   printing    them;    e.g.,
+              '--block-size=M'  prints sizes in units of 1,048,576 bytes; see
+              SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with -lt: sort by, and show, ctime (time of  last  modification
+              of  file  status  information); with -l: show ctime and sort by
+              name; otherwise: sort by ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              colorize the output; WHEN can be 'never', 'auto',  or  'always'
+              (the default); more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+GAWK(1)                        Utility Commands                       GAWK(1)
+
+
+
+NAME
+       gawk - pattern scanning and processing language
+
+SYNOPSIS
+       gawk [ POSIX or GNU style options ] -f program-file [ -- ] file ...
+       gawk [ POSIX or GNU style options ] [ -- ] program-text file ...
+
+       pgawk [ POSIX or GNU style options ] -f program-file [ -- ] file ...
+       pgawk [ POSIX or GNU style options ] [ -- ] program-text file ...
+
+       dgawk [ POSIX or GNU style options ] -f program-file [ -- ] file ...
+
+DESCRIPTION
+       Gawk  is  the GNU Project's implementation of the AWK programming lan‐
+       guage.  It conforms to the definition of the  language  in  the  POSIX
+       1003.1  Standard.  This version in turn is based on the description in
+       The AWK Programming Language, by Aho, Kernighan, and Weinberger.  Gawk
+       provides  the additional features found in the current version of UNIX
+       awk and a number of GNU-specific extensions.
+
+       The command line consists of options to gawk itself, the  AWK  program
+       text  (if not supplied via the -f or --file options), and values to be
+       made available in the ARGC and ARGV pre-defined AWK variables.
+
+       Pgawk is the profiling version of gawk.  It is identical in every  way
+       to  gawk,  except  that programs run more slowly, and it automatically
+       produces an execution profile in the file awkprof.out when done.   See
+       the --profile option, below.
+
+       Dgawk  is an awk debugger. Instead of running the program directly, it
+       loads the AWK source code and then  prompts  for  debugging  commands.
+       Unlike  gawk  and  pgawk, dgawk only processes AWK program source pro‐
+       vided with the -f option.  The debugger is documented in GAWK:  Effec‐
+       tive AWK Programming.
+
+OPTION FORMAT
+       Gawk options may be either traditional POSIX-style one letter options,
+       or GNU-style long options.  POSIX options start  with  a  single  “-”,
+       while  long  options  start  with “--”.  Long options are provided for
+       both GNU-specific features and for POSIX-mandated features.
+
+       Gawk- specific options are typically used in long-option form.   Argu‐
+       ments  to long options are either joined with the option by an = sign,
+       with no intervening spaces, or they may be provided in the  next  com‐
+       mand  line  argument.  Long options may be abbreviated, as long as the
+       abbreviation remains unique.
+CAT(1)                          User Commands                          CAT(1)
+
+
+
+NAME
+       cat - concatenate files and print on the standard output
+
+SYNOPSIS
+       cat [OPTION]... [FILE]...
+
+DESCRIPTION
+       Concatenate FILE(s), or standard input, to standard output.
+
+       -A, --show-all
+              equivalent to -vET
+
+       -b, --number-nonblank
+              number nonempty output lines, overrides -n
+
+       -e     equivalent to -vE
+
+       -E, --show-ends
+              display $ at end of each line
+
+       -n, --number
+              number all output lines
+
+       -s, --squeeze-blank
+              suppress repeated empty output lines
+
+       -t     equivalent to -vT
+
+       -T, --show-tabs
+              display TAB characters as ^I
+
+       -u     (ignored)
+
+       -v, --show-nonprinting
+              use ^ and M- notation, except for LFD and TAB
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       With no FILE, or when FILE is -, read standard input.
+
+EXAMPLES
+       cat f - g
+              Output f's contents, then standard input, then g's contents.
+SED(1)                          User Commands                          SED(1)
+
+
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+DESCRIPTION
+       Sed is a stream editor.  A stream editor is used to perform basic text
+       transformations on an input stream (a file or input from a  pipeline).
+       While  in  some ways similar to an editor which permits scripted edits
+       (such as ed), sed works by making only one pass over the input(s), and
+       is  consequently  more  efficient.   But it is sed's ability to filter
+       text in a pipeline which  particularly  distinguishes  it  from  other
+       types of editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add the contents of script-file to the commands to be executed
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+              edit files in place (makes backup if SUFFIX supplied)
+
+       -c, --copy
+
+              use copy instead of rename when shuffling files in -i mode
+
+       -b, --binary
+
+              does  nothing;  for compatibility with WIN32/CYGWIN/MSDOS/EMX (
+              open files in binary mode (CR+LFs are not treated specially))
+
+       -l N, --line-length=N
+
+CHMOD(1)                        User Commands                        CHMOD(1)
+
+
+
+NAME
+       chmod - change file mode bits
+
+SYNOPSIS
+       chmod [OPTION]... MODE[,MODE]... FILE...
+       chmod [OPTION]... OCTAL-MODE FILE...
+       chmod [OPTION]... --reference=RFILE FILE...
+
+DESCRIPTION
+       This  manual  page  documents the GNU version of chmod.  chmod changes
+       the file mode bits of each given file according to mode, which can  be
+       either  a symbolic representation of changes to make, or an octal num‐
+       ber representing the bit pattern for the new mode bits.
+
+       The format of a symbolic mode is [ugoa...][[+-=][perms...]...],  where
+       perms  is either zero or more letters from the set rwxXst, or a single
+       letter from the set ugo.  Multiple symbolic modes can be given,  sepa‐
+       rated by commas.
+
+       A  combination of the letters ugoa controls which users' access to the
+       file will be changed: the user who owns it (u),  other  users  in  the
+       file's  group  (g),  other  users  not in the file's group (o), or all
+       users (a).  If none of these are given, the effect is  as  if  a  were
+       given, but bits that are set in the umask are not affected.
+
+       The  operator  + causes the selected file mode bits to be added to the
+       existing file mode bits of each file; - causes them to be removed; and
+       =  causes  them  to be added and causes unmentioned bits to be removed
+       except that a directory's unmentioned set user and group ID  bits  are
+       not affected.
+
+       The  letters rwxXst select file mode bits for the affected users: read
+       (r),  write  (w),  execute  (or  search  for  directories)  (x),  exe‐
+       cute/search  only  if  the  file is a directory or already has execute
+       permission for some user (X), set user or group ID on  execution  (s),
+       restricted deletion flag or sticky bit (t).  Instead of one or more of
+       these letters, you can specify exactly one of  the  letters  ugo:  the
+       permissions granted to the user who owns the file (u), the permissions
+       granted to other users who are members of the file's  group  (g),  and
+       the  permissions  granted to users that are in neither of the two pre‐
+       ceding categories (o).
+
+       A numeric mode is from one to four  octal  digits  (0-7),  derived  by
+       adding  up  the  bits  with  values  4,  2, and 1.  Omitted digits are
+       assumed to be leading zeros.  The first digit selects the set user  ID
+       (4)  and  set  group  ID  (2)  and  restricted  deletion or sticky (1)
+WC(1)                           User Commands                           WC(1)
+
+
+
+NAME
+       wc - print newline, word, and byte counts for each file
+
+SYNOPSIS
+       wc [OPTION]... [FILE]...
+       wc [OPTION]... --files0-from=F
+
+DESCRIPTION
+       Print  newline,  word, and byte counts for each FILE, and a total line
+       if more than one FILE is specified.  With no FILE, or when FILE is  -,
+       read  standard input.  A word is a non-zero-length sequence of charac‐
+       ters delimited by white space.  The  options  below  may  be  used  to
+       select  which  counts are printed, always in the following order: new‐
+       line, word, character, byte, maximum line length.
+
+       -c, --bytes
+              print the byte counts
+
+       -m, --chars
+              print the character counts
+
+       -l, --lines
+              print the newline counts
+
+       --files0-from=F
+              read input from the files specified by NUL-terminated names  in
+              file F; If F is - then read names from standard input
+
+       -L, --max-line-length
+              print the length of the longest line
+
+       -w, --words
+              print the word counts
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       GNU  coreutils  online  help: <http://www.gnu.org/software/coreutils/>
+       Report wc translation bugs to <http://translationproject.org/team/>
+
+AUTHOR
+       Written by Paul Rubin and David MacKenzie.
+
+COPYRIGHT
+GREP(1)                    General Commands Manual                    GREP(1)
+
+
+
+NAME
+       grep, egrep, fgrep - print lines matching a pattern
+
+SYNOPSIS
+       grep [OPTIONS] PATTERN [FILE...]
+       grep [OPTIONS] [-e PATTERN | -f FILE] [FILE...]
+
+DESCRIPTION
+       grep searches the named input FILEs (or standard input if no files are
+       named, or if a single hyphen-minus (-) is  given  as  file  name)  for
+       lines  containing  a  match  to  the  given PATTERN.  By default, grep
+       prints the matching lines.
+
+       In addition, two variant  programs  egrep  and  fgrep  are  available.
+       egrep  is  the same as grep -E.  fgrep is the same as grep -F.  Direct
+       invocation as either egrep or fgrep is deprecated, but is provided  to
+       allow historical applications that rely on them to run unmodified.
+
+OPTIONS
+   Generic Program Information
+       --help Print  a  usage  message briefly summarizing these command-line
+              options and the bug-reporting address, then exit.
+
+       -V, --version
+              Print the version number of grep to the standard output stream.
+              This  version number should be included in all bug reports (see
+              below).
+
+   Matcher Selection
+       -E, --extended-regexp
+              Interpret PATTERN as an extended regular expression  (ERE,  see
+              below).  (-E is specified by POSIX.)
+
+       -F, --fixed-strings, --fixed-regexp
+              Interpret  PATTERN  as  a  list  of fixed strings, separated by
+              newlines, any of which is to be matched.  (-F is  specified  by
+              POSIX,  --fixed-regexp is an obsoleted alias, please do not use
+              it in new scripts.)
+
+       -G, --basic-regexp
+              Interpret PATTERN as  a  basic  regular  expression  (BRE,  see
+              below).  This is the default.
+
+       -P, --perl-regexp
+              Interpret PATTERN as a Perl regular expression.  This is highly
+              experimental and grep -P may warn of unimplemented features.
+BASH_BUILTINS(1)           General Commands Manual           BASH_BUILTINS(1)
+
+
+
+NAME
+       bash,  :,  ., [, alias, bg, bind, break, builtin, caller, cd, command,
+       compgen, complete, compopt, continue,  declare,  dirs,  disown,  echo,
+       enable,  eval, exec, exit, export, false, fc, fg, getopts, hash, help,
+       history, jobs, kill, let, local, logout, mapfile, popd, printf, pushd,
+       pwd, read, readonly, return, set, shift, shopt, source, suspend, test,
+       times, trap, true, type, typeset, ulimit, umask, unalias, unset,  wait
+       - bash built-in commands, see bash(1)
+
+BASH BUILTIN COMMANDS
+       Unless  otherwise  noted, each builtin command documented in this sec‐
+       tion as accepting options preceded by - accepts -- to signify the  end
+       of  the  options.  The :, true, false, and test builtins do not accept
+       options and do not treat -- specially.  The exit, logout, break,  con‐
+       tinue,  let, and shift builtins accept and process arguments beginning
+       with - without requiring --.  Other builtins that accept arguments but
+       are  not  specified as accepting options interpret arguments beginning
+       with - as invalid options and require -- to prevent  this  interpreta‐
+       tion.
+       : [arguments]
+              No  effect; the command does nothing beyond expanding arguments
+              and performing any specified redirections.  A zero exit code is
+              returned.
+
+        .  filename [arguments]
+       source filename [arguments]
+              Read  and  execute  commands from filename in the current shell
+              environment and return the exit status of the last command exe‐
+              cuted  from  filename.   If  filename does not contain a slash,
+              file names in PATH are used to find  the  directory  containing
+              filename.   The  file  searched  for  in  PATH need not be exe‐
+              cutable.  When bash is not in posix mode, the current directory
+              is  searched  if  no  file is found in PATH.  If the sourcepath
+              option to the shopt builtin command is turned off, the PATH  is
+              not  searched.   If any arguments are supplied, they become the
+              positional parameters when filename is executed.  Otherwise the
+              positional  parameters are unchanged.  The return status is the
+              status of the last command exited within the script  (0  if  no
+              commands  are  executed), and false if filename is not found or
+              cannot be read.
+
+       alias [-p] [name[=value] ...]
+              Alias with no arguments or with the -p option prints  the  list
+              of  aliases  in  the  form alias name=value on standard output.
+              When arguments are supplied, an alias is defined for each  name
+              whose  value  is  given.  A trailing space in  value causes the
+CP(1)                           User Commands                           CP(1)
+
+
+
+NAME
+       cp - copy files and directories
+
+SYNOPSIS
+       cp [OPTION]... [-T] SOURCE DEST
+       cp [OPTION]... SOURCE... DIRECTORY
+       cp [OPTION]... -t DIRECTORY SOURCE...
+
+DESCRIPTION
+       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+       Mandatory  arguments  to  long options are mandatory for short options
+       too.
+
+       -a, --archive
+              same as -dR --preserve=all
+
+       --attributes-only
+              don't copy the file data, just the attributes
+
+       --backup[=CONTROL]
+              make a backup of each existing destination file
+
+       -b     like --backup but does not accept an argument
+
+       --copy-contents
+              copy contents of special files when recursive
+
+       -d     same as --no-dereference --preserve=links
+
+       -f, --force
+              if an existing destination file cannot be opened, remove it and
+              try  again  (this  option is ignored when the -n option is also
+              used)
+
+       -i, --interactive
+              prompt before overwrite (overrides a previous -n option)
+
+       -H     follow command-line symbolic links in SOURCE
+
+       -l, --link
+              hard link files instead of copying
+
+       -L, --dereference
+              always follow symbolic links in SOURCE
+
