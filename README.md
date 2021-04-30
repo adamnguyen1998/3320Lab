@@ -37,7 +37,29 @@ gcc -o calcPrice calcPrice.c
 
 gcc -o getPhoneNumber getPhoneNumber.c
 
-./getPhoneNumber.c
+./getPhoneNumber
 
-Lab 8:
+Lab 9:
+
+gcc -o addressOfScalar addressOfScalar.c
+
+./addressOfScalar
+
+gcc -o getMostFreqChar getMostFreqChar.c
+
+./getMostFreqChar
+
+gcc -o addressOfArray addressOfArray.c
+
+./addressOfArray
+
+Lab 10:
+
+gcc -o findStr findStr.c
+
+./findStr
+
+gcc -o splitTime splitTime.c
+
+./splitTime
 
