@@ -27,8 +27,17 @@ gcc -o myName myName.c
 
 ./myName
 
-Lab7:
+Lab 7:
 
 How to execute:
 
+gcc -o calcPrice calcPrice.c
+
+./calcPrice
+
+gcc -o getPhoneNumber getPhoneNumber.c
+
+./getPhoneNumber.c
+
+Lab 8:
 
