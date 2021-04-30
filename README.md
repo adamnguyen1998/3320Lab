@@ -63,3 +63,23 @@ gcc -o splitTime splitTime.c
 
 ./splitTime
 
+Homework 4:
+
+gcc -o countrycodes countrycodes.c
+
+./countrycodes
+
+gcc -o palindrome palindrome.c
+
+./palindrome
+
+gcc -o checkPasswdQ2 checkPasswdQ2.c
+
+./checkPasswdQ2
+
+gcc -o checkPasswdQ1 checkPasswdQ1.c
+
+./checkPasswdQ1
+
+
+
