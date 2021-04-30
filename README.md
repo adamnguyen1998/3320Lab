@@ -11,13 +11,16 @@ Make the shell script executable with command chmod +x <fileName>.
   
   Example: chmod a+x Hello.sh
   
-Then run the script using ./<fileName>.
+Then run the script using ./ <fileName>.
   
   Example: ./Hello.sh
 
 Lab 6: 
+
 How to execute:
+
 chmod a+x hello.sh
+
 ./hello.sh
 
 Lab7:
