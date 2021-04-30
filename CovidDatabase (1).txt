@@ -1,0 +1,102 @@
+
+First Name : Edith
+Last Name : Delagarza
+Birthdate : 11/20/1997
+Gender : Female
+Dose Number : 2
+Previous Dose Time : 1/15/2021
+Vaccine type : Pfizer
+Zipcode : 64804
+Code : ED23P804
+
+
+First Name : Maria
+Last Name : Mastro
+Birthdate : 12/25/1998
+Gender : Do not wish to identify
+Dose Number : 1
+Vaccine type : Johnson&Johnson
+Zipcode : 95926
+Code : MM22J926
+
+
+First Name : Keshia
+Last Name : Lee
+Birthdate : 1/30/1960
+Gender : Female
+Dose Number : 1
+Vaccine type : Moderna
+Zipcode : 48034
+Code : KL61M034
+
+
+First Name : Amy
+Last Name : Escobar
+Birthdate : 7/21/1944
+Gender : Female
+Dose Number : 2
+Previous Dose Time : 2/1/2021
+Vaccine type : Pfizer
+Zipcode : 77573
+Code : AE76P573
+
+
+First Name : Lavonne
+Last Name : Alligood
+Birthdate : 7/31/1972
+Gender : Male
+Dose Number : 1
+Vaccine type : Johnson&Johnson
+Zipcode : 06095
+Code : LA48J095
+
+
+First Name : Matthew
+Last Name : Crandall
+Birthdate : 8/6/1966
+Gender : Male
+Dose Number : 1
+Vaccine type : Pfizer
+Zipcode : 90017
+Code : MC54P017
+
+
+First Name : Daniel
+Last Name : Freeman
+Birthdate : 9/12/1963
+Gender : Male
+Dose Number : 1
+Vaccine type : Johnson&Johnson
+Zipcode : 39429
+Code : DF57J429
+
+
+First Name : Emily
+Last Name : Hunter
+Birthdate : 9/22/1968
+Gender : Female
+Dose Number : 1
+Vaccine type : Johnson&Johnson
+Zipcode : 54235
+Code : EH52J235
+
+
+First Name : Krista
+Last Name : Merlo
+Birthdate : 2/18/1989
+Gender : Female
+Dose Number : 1
+Vaccine type : Moderna
+Zipcode : 70806
+Code : KM32M806
+
+
+First Name : Paula
+Last Name : Dahlen
+Birthdate : 7/21/1966
+Gender : Female
+Dose Number : 1
+Vaccine type : Johnson&Johnson
+Zipcode : 33483
+Code : PD54J483
+
