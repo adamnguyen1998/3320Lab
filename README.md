@@ -83,3 +83,37 @@ gcc -o checkPasswdQ1 checkPasswdQ1.c
 
 Exam 1:
 
+gcc -o convertDecimalBinary convertDecimalBinary.c
+
+./convertDecimalBinary
+
+chmod a+x Compressor.sh
+
+./Compressor.sh
+
+chmod a+x fileSearcher.sh
+
+./fileSearcher.sh
+
+chmod a+x bookEditor.sh
+
+./bookEditor.sh
+
+chmod a+x doubleExecuterC.sh
+
+./doubleExecuterC.sh
+
+gcc -o factorial factorial.c
+
+./factorial
+
+chmod a+x helpme.sh
+
+./helpme.sh
+
+gcc -o integerConverter integerConverter.c
+
+./integerConverter
+
+Exam 2:
+
