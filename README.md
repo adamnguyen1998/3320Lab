@@ -23,4 +23,12 @@ chmod a+x hello.sh
 
 ./hello.sh
 
+gcc -o myName myName.c
+
+./myName
+
 Lab7:
+
+How to execute:
+
+
