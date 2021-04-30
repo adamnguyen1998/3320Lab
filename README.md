@@ -14,6 +14,10 @@ Make the shell script executable with command chmod +x "fileName".
 Then run the script using ./"fileName".
   
   Example: ./Hello.sh
+  
+  
+  
+  
 
 Lab 6: 
 
